@@ -1,0 +1,138 @@
+.character-card {
+  background-color: #1c1c25;
+  border-radius: 16px;
+  overflow: visible;
+  width: 100%;
+  max-width: 280px; /* Limitar el tamaño de las tarjetas */
+  margin: 20px auto; /* Centramos las tarjetas y les damos márgenes */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  cursor: default;
+  transition: transform 0.3s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.character-image-container {
+  width: 100%;
+  background: #ffffff;
+  background-image: url("https://web.dragonball-api.com/images-compress/89980.webp");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 320px;
+  position: relative;
+  z-index: 1;
+  overflow: visible;
+}
+
+.character-image {
+  width: 100%;
+  height: auto;
+  max-height: 320px;
+  object-fit: contain;
+  margin-top: -30px;
+  z-index: 2;
+  transition: transform 0.4s ease;
+}
+
+/* SOLO se aplica al pasar el mouse por la parte de la imagen */
+.character-image-container:hover .character-image {
+  transform: scale(1.15);
+}
+
+.character-content {
+  padding: 20px 18px;
+  background-color: #2a2a35;
+  border-top: 2px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+  z-index: 0;
+}
+
+.character-name {
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.character-race {
+  color: #f7c948;
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 14px;
+}
+
+.character-info-block {
+  margin-bottom: 12px;
+}
+
+.character-label {
+  font-size: 14px;
+  color: white;
+  margin-bottom: 2px;
+}
+
+.character-highlight {
+  font-size: 15px;
+  color: #f7c948;
+  font-weight: 600;
+}
+
+/* ✅ RESPONSIVE GRID (útil para contenedor general de tarjetas) */
+.character-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  margin: 20px;
+}
+
+/* Responsividad para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+  .character-card {
+    max-width: 90%; /* Reducimos el tamaño en pantallas más pequeñas */
+  }
+
+  .character-image-container {
+    height: 250px;
+  }
+
+  .character-image {
+    max-height: 250px;
+  }
+
+  .character-name {
+    font-size: 20px;
+  }
+
+  .character-race,
+  .character-label,
+  .character-highlight {
+    font-size: 14px;
+  }
+
+  .character-content {
+    padding: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .character-image-container {
+    height: 200px;
+  }
+
+  .character-image {
+    max-height: 200px;
+  }
+
+  .character-name {
+    font-size: 18px;
+  }
+
+  .character-race,
+  .character-label,
+  .character-highlight {
+    font-size: 13px;
+  }
+}
