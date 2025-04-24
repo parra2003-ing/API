@@ -1,0 +1,80 @@
+.acerca-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #444;
+  }
+  
+  .dev-card {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+  }
+  
+  .dev-card:hover {
+    transform: scale(1.02);
+  }
+  
+  .dev-img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    margin-right: 20px;
+    border-radius: 12px;
+    background-color: #f1f1f1;
+    padding: 8px;
+    flex-shrink: 0;
+  }
+  
+  .dev-info {
+    max-width: 500px;
+    text-align: left;
+  }
+  
+  .dev-info h2 {
+    margin-bottom: 10px;
+    color: #2d2d2d;
+  }
+  
+  .dev-info a {
+    color: #1e88e5;
+    text-decoration: none;
+  }
+  
+  footer {
+    margin-top: 40px;
+    color: #888;
+    font-size: 0.9rem;
+  }
+  
+  /* 📱 Responsive */
+  @media screen and (max-width: 768px) {
+    .dev-card {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .dev-img {
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+  
+    .dev-info {
+      text-align: center;
+    }
+  }
+  
